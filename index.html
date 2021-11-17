@@ -5,33 +5,19 @@
   <meta charset="utf-8" />
   <title>Image Slideshow Animation</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
 </head>
 
 <body>
   <div class="content">
     <div class="images">
-      <img class="visible" src="bg1.jpeg" />
-      <img class="no-visible" src="bg2.jpg" />
-      <img class="no-visible" src="bg3.jpeg" />
-      <img class="no-visible" src="bg4.jpeg" />
-      <img class="no-visible" src="bg5.jpg" />
+      <img class="visible" src="img_1.jpeg" />
+      <img class="no-visible" src="img_2.jpg" />
+      <img class="no-visible" src="img_3.jpeg" />
+      <img class="no-visible" src="img_4.jpeg" />
+      <img class="no-visible" src="img_5.jpg" />
     </div>
   </div>
-
-  <script>
-    let indexImgs = 0
-    const imgs = document.querySelectorAll('img')
-
-    const slideShow = () => {
-      for (const img of imgs) img.className = 'no-visible'
-      imgs[indexImgs].className = 'visible'
-      indexImgs++
-      if (indexImgs >= imgs.length) indexImgs = 0
-      setTimeout(slideShow, 2000)
-    }
-
-    slideShow()
-  </script>
 </body>
 
 </html>
